@@ -29,3 +29,23 @@ window.onload = function () {
         { theme: "outline", size: "large" } // Configura o estilo do botão
     );
 };
+
+
+
+function handleCredentialResponse(response) {
+    console.log("Token JWT recebido:", response.credential);
+
+    // Enviando o token para o backend
+    fetch("http://localhost:3000/google-auth", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token: response.credential }),
+    })
+        .then((res) => res.json())
+        .then((data) => {
+            alert(data.message);
+            console.log(data.user);
+        })
+        .catch((err) => console.error("Erro:", err));
+}
+

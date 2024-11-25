@@ -222,3 +222,14 @@ body {
 .container.active .toggle-right {
     transform: translateX(200%);
 }
+
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; 
+    margin-bottom: 40px; 
+}
+
+
