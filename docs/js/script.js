@@ -19,7 +19,7 @@ function handleCredentialResponse(response) {
 
 window.onload = function () {
     google.accounts.id.initialize({
-        client_id: "SEU_CLIENT_ID", // Substitua pelo seu Client ID
+        client_id: "829307104738-qm9n0c3s2akt3v1h4ck20tkp35peh62v.apps.googleusercontent.com", // Substitua pelo seu Client ID
         callback: handleCredentialResponse,
         useFedCM: true, // Habilita FedCM para navegadores modernos
     });
